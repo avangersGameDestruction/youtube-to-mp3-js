@@ -2,7 +2,7 @@
 function loadVideo(video) {
     const youTube = require("youtube-node");
     const fs = require("fs");
-    const youTubeApiKey = "AIzaSyD8e4bz4jKsYt1_c4_g8x2Xjt1FZHkEoFc";
+    const youTubeApiKey = "your api key";
     const youTubeApi = new youTube(youTubeApiKey);
     const path = require("path");
     const ffmpeg = require("fluent-ffmpeg");
