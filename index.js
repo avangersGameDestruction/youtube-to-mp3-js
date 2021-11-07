@@ -30,10 +30,12 @@ function loadVideo(video) {
             let dir = path.join(__dirname, "videos");
             let file = path.join(dir, `${title}.mp4`);
             let file2 = path.join(dir, `${title}.mp3`);
+            // if the directory doesn't exist create it
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }
             console.log(`Downloading video ${title}`);
+            // youTubeApi.getById(id, function(error, result = a function to get the video by id and the callback function to show the error and the result
             youTubeApi.getById(id, function(error, result) {
                 if (error) {
                     console.log(error);
